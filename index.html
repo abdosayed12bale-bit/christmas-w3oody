@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: center;
   }
-
   .box {
     width: 90%;
     max-width: 420px;
@@ -26,7 +25,6 @@
     background: linear-gradient(135deg, #b11226, #e63946);
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
   }
-
   h2 { margin-bottom: 15px; }
   p { font-size: 18px; line-height: 1.8; }
   .highlight { color: #ffe066; font-weight: bold; }
@@ -96,7 +94,7 @@
 <script>
 function check() {
   const pass = document.getElementById("pass").value;
-  if(pass === "19/4/2005") { // حطي الباسورد اللي تحبيه
+  if(pass === "19/4/2005") {
     document.getElementById("step0").classList.add("hidden");
     document.getElementById("step1").classList.remove("hidden");
   } else {
