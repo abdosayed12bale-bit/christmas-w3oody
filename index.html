@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Christmas 2026</title>
-<style>
-body{
-background:#8b0000;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-font-family:Arial;
-}
-.card{
-background:white;
-width:300px;
-padding:20px;
-border-radius:20px;
-text-align:center;
-}
-input,button{
-width:100%;
-padding:10px;
-margin-top:10px;
-border-radius:20px;
-border:1px solid #ccc;
-}
-button{
-background:#b31c1c;
-color:white;
-border:none;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>For W3oody ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    .box {
+      width: 90%;
+      max-width: 400px;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background: #e63946;
+      color: #fff;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-<div class="card">
-<h2>🎄 2026 🎄</h2>
-<p>Enter password</p>
-<input type="password" id="pass">
-<button onclick="check()">Unlock 🔓</button>
+
+<div class="box" id="login">
+  <h2>For W3oody ❤️</h2>
+  <p>اكتبي الباسورد</p>
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="check()">دخول</button>
+</div>
+
+<div class="box hidden" id="content">
+  <h1>W3oody ❤️</h1>
+  <p>
+    انتي مش مجرد اسم  
+    انتي حاجة جميلة حصلت في حياتي  
+    وكل مرة أضحك فيها بيكون ليكي سبب 🤍
+  </p>
 </div>
 
 <script>
-function check(){
-if(document.getElementById("pass").value==="19-4-2005"){
-window.location="love.html";
-}else{
-alert("الباسورد غلط");
-}
-}
+  function check() {
+    if (document.getElementById("pass").value === "19/4/2005") {
+      document.getElementById("login").classList.add("hidden");
+      document.getElementById("content").classList.remove("hidden");
+    } else {
+      alert("غلط 😅");
+    }
+  }
 </script>
+
 </body>
 </html>
