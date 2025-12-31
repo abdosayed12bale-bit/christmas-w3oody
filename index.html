@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Christmas 2026</title>
+<style>
+body{
+background:#8b0000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+}
+.card{
+background:white;
+width:300px;
+padding:20px;
+border-radius:20px;
+text-align:center;
+}
+input,button{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:20px;
+border:1px solid #ccc;
+}
+button{
+background:#b31c1c;
+color:white;
+border:none;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>🎄 2026 🎄</h2>
+<p>Enter password</p>
+<input type="password" id="pass">
+<button onclick="check()">Unlock 🔓</button>
+</div>
+
+<script>
+function check(){
+if(document.getElementById("pass").value==="19-4-2005"){
+window.location="love.html";
+}else{
+alert("الباسورد غلط");
+}
+}
+</script>
+</body>
+</html>
