@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>For W3oody ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -15,11 +16,34 @@
       font-family: Arial, sans-serif;
       color: #fff;
       text-align: center;
+      direction: rtl;
     }
+
     .box {
       width: 90%;
       max-width: 400px;
+      padding: 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #b11226, #e63946);
+      box-shadow: 0 0 25px rgba(230,57,70,0.6);
     }
+
+    .overlay {
+      background: rgba(0,0,0,0.35);
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .christmas {
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    .highlight {
+      color: #ffe066;
+      font-weight: bold;
+    }
+
     button {
       width: 100%;
       padding: 12px;
@@ -27,9 +51,10 @@
       border-radius: 8px;
       border: none;
       font-size: 16px;
-      background: #e63946;
+      background: #1b4332;
       color: #fff;
     }
+
     input {
       width: 100%;
       padding: 12px;
@@ -38,9 +63,11 @@
       border: none;
       font-size: 16px;
     }
+
     .hidden {
       display: none;
     }
+
     img {
       width: 100%;
       border-radius: 12px;
@@ -48,43 +75,75 @@
     }
   </style>
 </head>
+
 <body>
 
 <div class="box" id="step0">
-  <h2>For W3oody ❤️</h2>
-  <p>اكتبي الباسورد</p>
-  <input type="password" id="pass">
-  <button onclick="check()">دخول</button>
+  <div class="overlay">
+    <h2>🎄 For W3oody ❤️ 🎄</h2>
+    <p>اكتبي الباسورد</p>
+    <input type="password" id="pass">
+    <button onclick="check()">دخول</button>
+  </div>
 </div>
 
 <div class="box hidden" id="step1">
-  <p>
+  <div class="overlay christmas">
+    🎅  
+    <br>
     انتي مش مجرد اسم  
     <br>
-    انتي حاجة جميلة حصلت في حياتي 🤍
-  </p>
-  <button onclick="next(1)">التالي</button>
+    <span class="highlight">انتي حاجة جميلة</span> حصلت في حياتي  
+    <br>
+    🎄
+    <button onclick="next(1)">التالي</button>
+  </div>
 </div>
 
 <div class="box hidden" id="step2">
-  <p>
+  <div class="overlay christmas">
+    🎁  
+    <br>
     انتي أجمل حاجة شفتها في عيني  
     <br>
     وكل مرة ببصلك  
     <br>
-    بحس إن الدنيا لسه فيها خير ❤️
-  </p>
-  <button onclick="next(2)">التالي</button>
+    بحس إن الدنيا لسه فيها خير  
+    <br>
+    ❤️🎄
+    <button onclick="next(2)">التالي</button>
+  </div>
 </div>
 
 <div class="box hidden" id="step3">
-  <h3>اليوم اللي عرفتك فيه 💕</h3>
-  <p>
-    كان سنة 2023  
+  <div class="overlay christmas">
+    🎄  
     <br>
-    ومنه كل حاجة حلوة ابتدت
-  </p>
-<img src="./images/photo.jpg">
+    <span class="highlight">انتي بجد أحلى وعد</span> خدته على نفسي  
+    <br>
+    انتي الوحيدة اللي مهما حاولت أبعد عنها مقدرش  
+    <br>
+    انتي حاجة جميلة أوي أوي  
+    <br>
+    وحتى لو شايفاني مجرد صاحبك  
+    <br>
+    أنا مبسوط علشان أهم حاجة إني معاكي  
+    <br>
+    ❤️🎅
+    <button onclick="next(3)">التالي</button>
+  </div>
+</div>
+
+<div class="box hidden" id="step4">
+  <div class="overlay">
+    <h3>🎄 اليوم اللي عرفتك فيه 💕</h3>
+    <p>
+      كان سنة 2023  
+      <br>
+      ومنه كل حاجة حلوة ابتدت
+    </p>
+    <img src="photo.jpg" alt="صورتنا">
+  </div>
 </div>
 
 <script>
