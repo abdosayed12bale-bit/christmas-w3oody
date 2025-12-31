@@ -24,8 +24,8 @@
       max-width: 400px;
       padding: 20px;
       border-radius: 20px;
-      background: linear-gradient(135deg, #b11226, #e63946);
-      box-shadow: 0 0 25px rgba(230,57,70,0.6);
+      background: linear-gradient(135deg, #b11226, #e63946); /* أحمر كريسماس */
+      box-shadow: 0 0 25px rgba(230,57,70,0.7);
     }
 
     .overlay {
@@ -51,7 +51,7 @@
       border-radius: 8px;
       border: none;
       font-size: 16px;
-      background: #1b4332;
+      background: #1b4332; /* أخضر كريسماس */
       color: #fff;
     }
 
@@ -78,6 +78,7 @@
 
 <body>
 
+<!-- STEP 0 -->
 <div class="box" id="step0">
   <div class="overlay">
     <h2>🎄 For W3oody ❤️ 🎄</h2>
@@ -87,6 +88,7 @@
   </div>
 </div>
 
+<!-- STEP 1 -->
 <div class="box hidden" id="step1">
   <div class="overlay christmas">
     🎅  
@@ -100,6 +102,7 @@
   </div>
 </div>
 
+<!-- STEP 2 -->
 <div class="box hidden" id="step2">
   <div class="overlay christmas">
     🎁  
@@ -115,6 +118,7 @@
   </div>
 </div>
 
+<!-- STEP 3 (الكلام الجديد) -->
 <div class="box hidden" id="step3">
   <div class="overlay christmas">
     🎄  
@@ -123,17 +127,20 @@
     <br>
     انتي الوحيدة اللي مهما حاولت أبعد عنها مقدرش  
     <br>
-    انتي حاجة جميلة أوي أوي  
+    انتي بجد حاجة جميلة أوي أوي  
     <br>
     وحتى لو شايفاني مجرد صاحبك  
     <br>
     أنا مبسوط علشان أهم حاجة إني معاكي  
     <br>
-    ❤️🎅
+    وهفضل أكلمك ❤️❤️  
+    <br>
+    🎅
     <button onclick="next(3)">التالي</button>
   </div>
 </div>
 
+<!-- STEP 4 -->
 <div class="box hidden" id="step4">
   <div class="overlay">
     <h3>🎄 اليوم اللي عرفتك فيه 💕</h3>
@@ -149,8 +156,180 @@
 <script>
   function check() {
     if (document.getElementById("pass").value === "19/4/2005") {
-      step0.classList.add("hidden");
-      step1.classList.remove("hidden");
+      document.getElementById("step0").classList.add("hidden");
+      document.getElementById("step1").classList.remove("hidden");
+    } else {
+      alert("الباسورد غلط 😅");
+    }
+  }
+
+  function next(n) {
+    document.getElementById("step" + n).classList.add("hidden");
+    document.getElementById("step" + (n + 1)).classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>For W3oody ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      direction: rtl;
+    }
+
+    .box {
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #b11226, #e63946); /* أحمر كريسماس */
+      box-shadow: 0 0 25px rgba(230,57,70,0.7);
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.35);
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .christmas {
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    .highlight {
+      color: #ffe066;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      background: #1b4332; /* أخضر كريسماس */
+      color: #fff;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- STEP 0 -->
+<div class="box" id="step0">
+  <div class="overlay">
+    <h2>🎄 For W3oody ❤️ 🎄</h2>
+    <p>اكتبي الباسورد</p>
+    <input type="password" id="pass">
+    <button onclick="check()">دخول</button>
+  </div>
+</div>
+
+<!-- STEP 1 -->
+<div class="box hidden" id="step1">
+  <div class="overlay christmas">
+    🎅  
+    <br>
+    انتي مش مجرد اسم  
+    <br>
+    <span class="highlight">انتي حاجة جميلة</span> حصلت في حياتي  
+    <br>
+    🎄
+    <button onclick="next(1)">التالي</button>
+  </div>
+</div>
+
+<!-- STEP 2 -->
+<div class="box hidden" id="step2">
+  <div class="overlay christmas">
+    🎁  
+    <br>
+    انتي أجمل حاجة شفتها في عيني  
+    <br>
+    وكل مرة ببصلك  
+    <br>
+    بحس إن الدنيا لسه فيها خير  
+    <br>
+    ❤️🎄
+    <button onclick="next(2)">التالي</button>
+  </div>
+</div>
+
+<!-- STEP 3 (الكلام الجديد) -->
+<div class="box hidden" id="step3">
+  <div class="overlay christmas">
+    🎄  
+    <br>
+    <span class="highlight">انتي بجد أحلى وعد</span> خدته على نفسي  
+    <br>
+    انتي الوحيدة اللي مهما حاولت أبعد عنها مقدرش  
+    <br>
+    انتي بجد حاجة جميلة أوي أوي  
+    <br>
+    وحتى لو شايفاني مجرد صاحبك  
+    <br>
+    أنا مبسوط علشان أهم حاجة إني معاكي  
+    <br>
+    وهفضل أكلمك ❤️❤️  
+    <br>
+    🎅
+    <button onclick="next(3)">التالي</button>
+  </div>
+</div>
+
+<!-- STEP 4 -->
+<div class="box hidden" id="step4">
+  <div class="overlay">
+    <h3>🎄 اليوم اللي عرفتك فيه 💕</h3>
+    <p>
+      كان سنة 2023  
+      <br>
+      ومنه كل حاجة حلوة ابتدت
+    </p>
+    <img src="photo.jpg" alt="صورتنا">
+  </div>
+</div>
+
+<script>
+  function check() {
+    if (document.getElementById("pass").value === "19/4/2005") {
+      document.getElementById("step0").classList.add("hidden");
+      document.getElementById("step1").classList.remove("hidden");
     } else {
       alert("الباسورد غلط 😅");
     }
