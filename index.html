@@ -41,11 +41,15 @@
     .hidden {
       display: none;
     }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
-<!-- خطوة الباسورد -->
 <div class="box" id="step0">
   <h2>For W3oody ❤️</h2>
   <p>اكتبي الباسورد</p>
@@ -53,9 +57,7 @@
   <button onclick="check()">دخول</button>
 </div>
 
-<!-- خطوة 1 -->
 <div class="box hidden" id="step1">
-  <h2>W3oody ❤️</h2>
   <p>
     انتي مش مجرد اسم  
     <br>
@@ -64,7 +66,6 @@
   <button onclick="next(1)">التالي</button>
 </div>
 
-<!-- خطوة 2 -->
 <div class="box hidden" id="step2">
   <p>
     انتي أجمل حاجة شفتها في عيني  
@@ -75,8 +76,7 @@
   </p>
   <button onclick="next(2)">التالي</button>
 </div>
-  
-<!-- خطوة 3 (اليوم اللي عرفتها فيه) -->
+
 <div class="box hidden" id="step3">
   <h3>اليوم اللي عرفتك فيه 💕</h3>
   <p>
@@ -84,17 +84,16 @@
     <br>
     ومنه كل حاجة حلوة ابتدت
   </p>
-
-  <img src="photo.jpg" style="width:100%; border-radius:12px; margin-top:20px;">
+  <img src="photo.jpg">
 </div>
 
 <script>
   function check() {
     if (document.getElementById("pass").value === "19/4/2005") {
-      document.getElementById("step0").classList.add("hidden");
-      document.getElementById("step1").classList.remove("hidden");
+      step0.classList.add("hidden");
+      step1.classList.remove("hidden");
     } else {
-      alert("غلط 😅");
+      alert("الباسورد غلط 😅");
     }
   }
 
