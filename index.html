@@ -25,7 +25,7 @@
     background: linear-gradient(135deg, #b11226, #e63946);
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
   }
-  h2 { margin-bottom: 15px; }
+  h2, h3 { margin-bottom: 15px; }
   p { font-size: 18px; line-height: 1.8; }
   .highlight { color: #ffe066; font-weight: bold; }
   input {
@@ -36,6 +36,11 @@
     border: none;
     font-size: 16px;
     text-align: center;
+    transition: 0.3s;
+  }
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffe066;
   }
   button {
     width: 100%;
@@ -47,9 +52,17 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+    transition: 0.3s;
   }
+  button:hover { background: #2d6a4f; }
   .hidden { display: none; }
-  img { width: 100%; border-radius: 12px; margin-top: 20px; }
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
 </style>
 </head>
 <body>
@@ -87,6 +100,21 @@
     <h3>🎄 اليوم اللي عرفتك فيه 💕</h3>
     <p>كان سنة 2023<br>ومنها كل حاجة حلوة ابتدت</p>
     <img src="photo.jpg" alt="صورتنا">
+    <button onclick="next(4)">التالي</button>
+  </div>
+
+  <!-- STEP 5: الكلام بعد الصورة -->
+  <div id="step5" class="hidden">
+    <p>
+      💖<br>
+      عايز أقولك إنك جميلة بطريقة مختلفة أوي بالنسبة لي  
+      جمالك مش سهل يتوصف ولا يتشرح  
+      <br><br>
+      يمكن تكوني شايفاني شخص عادي  
+      بس بالنسبة لي  
+      أهم حاجة في الدنيا إني أكون معاكي  
+      وأكلمك… واطمّن إنك موجودة 🤍
+    </p>
   </div>
 
 </div>
